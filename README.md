@@ -4,8 +4,8 @@
 This project was created from a tutorial @gitdagray
 
 <br />
-    <a href="https://github.com/averoli/Todo_with_React_Query/src/">»</strong></a>
-    <br />
+    <img src="https://github.com/averoli/Todo_with_React_Query/blob/main/src/assets/Screenshot.png" />
+
 </div>
 
 # Getting Started with Create React App
