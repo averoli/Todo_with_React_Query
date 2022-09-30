@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const todosApi = axios.create({
-  baseURL: "http://localhost:3500"
+  baseURL: 'http://localhost:3500'
 })
 
 

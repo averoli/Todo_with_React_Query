@@ -1,6 +1,9 @@
 import { useQuery, useMutation, useQueryClient } from "react-query";
 import { getTodos, addTodo, updateTodo, deleteTodo } from "../../api/todosApi";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash, faUpload } from "@fortawesome/free-solid-svg-icons";
+
 import { useState } from "react";
 
 const TodoList = () => {
@@ -13,7 +16,7 @@ const TodoList = () => {
     error,
     data: todos,
   } = useQuery("todos", getTodos, {
-    select: data => data.sort((a, b) => b.id - a.id)
+    select: (data) => data.sort((a, b) => b.id - a.id),
   });
 
   const addTodoMutation = useMutation(addTodo, {
@@ -52,7 +55,9 @@ const TodoList = () => {
           placeholder="Enter new todo"
         />
       </div>
-      <button className="submit">Up</button>
+      <button className="submit">
+        <FontAwesomeIcon icon={faUpload} />
+      </button>
     </form>
   );
 
@@ -84,7 +89,7 @@ const TodoList = () => {
             className="trash"
             onClick={() => deleteTodoMutation.mutate({ id: todo.id })}
           >
-            Tr
+            <FontAwesomeIcon icon={faTrash} />
           </button>
         </article>
       );
@@ -93,7 +98,7 @@ const TodoList = () => {
 
   return (
     <main>
-        <h1>Todo list</h1>
+      <h1>Todo list</h1>
       {newItemSection}
       {content}
     </main>
