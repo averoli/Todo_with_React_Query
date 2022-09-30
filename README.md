@@ -1,6 +1,12 @@
-# About 
+<div align="center">
+<h1 align="center">Todo list with React Query</h1>
 
 This project was created from a tutorial @gitdagray
+
+<br />
+    <a href="https://github.com/averoli/Todo_with_React_Query/src/">»</strong></a>
+    <br />
+</div>
 
 # Getting Started with Create React App
 
